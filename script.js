@@ -1,6 +1,3 @@
-// ======================
-// VARIABLES
-// ======================
 const tablero = document.getElementById("tablero");
 const turnoTexto = document.getElementById("turno");
 const tiempoTexto = document.getElementById("tiempo");
