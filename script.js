@@ -18,26 +18,19 @@ let seleccionadas = [];
 let bloqueo = false;
 let puntos = {1: 0, 2: 0};
 
-// ======================
-// VALORES ÉTICOS (20 PARES)
-// ======================
 let valores = [
     "Respeto","Honestidad","Justicia","Solidaridad","Responsabilidad",
-    "Tolerancia","Igualdad","Empatía","Cooperación","Paz",
+    "Tolerancia","Igualdad","Empatía","Cooperación","Globalización",
     "Libertad","Dignidad","Compromiso","Lealtad","Diálogo",
-    "Equidad","Inclusión","Integridad","Civismo","Ética",
+    "Equidad","Inclusión","Integridad","Conciencia","Ética",
     "Respeto","Honestidad","Justicia","Solidaridad","Responsabilidad",
-    "Tolerancia","Igualdad","Empatía","Cooperación","Paz",
+    "Tolerancia","Igualdad","Empatía","Cooperación","Globalización",
     "Libertad","Dignidad","Compromiso","Lealtad","Diálogo",
-    "Equidad","Inclusión","Integridad","Civismo","Ética"
+    "Equidad","Inclusión","Integridad","Conciencia","Ética"
 ];
 
-// Mezclar cartas
 valores.sort(() => Math.random() - 0.5);
 
-// ======================
-// CREAR TABLERO
-// ======================
 valores.forEach(valor => {
     const carta = document.createElement("div");
     carta.classList.add("carta");
@@ -53,9 +46,6 @@ valores.forEach(valor => {
     tablero.appendChild(carta);
 });
 
-// ======================
-// FUNCIONES
-// ======================
 function voltearCarta(carta, valor) {
     if (bloqueo || carta.classList.contains("volteada")) return;
 
@@ -100,9 +90,7 @@ function actualizarPuntaje() {
     p2Texto.textContent = puntos[2];
 }
 
-// ======================
-// TEMPORIZADOR
-// ======================
+
 function iniciarTiempo() {
     timer = setInterval(() => {
         tiempo--;
